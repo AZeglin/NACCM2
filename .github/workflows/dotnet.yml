@@ -4,15 +4,12 @@
 name: .NET
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  workflow_dispatch
+ 
 jobs:
   build:
 
-    runs-on: x64
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v3
