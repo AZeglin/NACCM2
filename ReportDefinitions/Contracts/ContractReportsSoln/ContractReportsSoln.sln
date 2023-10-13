@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ContractReports", "ContractReports\ContractReports.rptproj", "{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ammhinteamsv3:8080/tfs/vanac
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ContractReports\\ContractReports.rptproj
+		SccProjectName1 = ContractReports
+		SccLocalPath1 = ContractReports
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		NewProd|Default = NewProd|Default
+		NewTest|Default = NewTest|Default
+		Production|Default = Production|Default
+		Test|Default = Test|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Debug|Default.ActiveCfg = Debug
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Debug|Default.Build.0 = Debug
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.DebugLocal|Default.Build.0 = DebugLocal
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.NewProd|Default.ActiveCfg = NewProd
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.NewProd|Default.Build.0 = NewProd
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.NewProd|Default.Deploy.0 = NewProd
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.NewTest|Default.ActiveCfg = NewTest
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.NewTest|Default.Build.0 = NewTest
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.NewTest|Default.Deploy.0 = NewTest
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Production|Default.ActiveCfg = Production
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Production|Default.Build.0 = Production
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Production|Default.Deploy.0 = Production
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Test|Default.ActiveCfg = Test
+		{CA5C43E8-A047-4CC7-9A58-50CCE0E09CF4}.Test|Default.Build.0 = Test
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
