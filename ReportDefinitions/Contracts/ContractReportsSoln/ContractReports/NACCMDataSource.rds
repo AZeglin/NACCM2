@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="NACCMDataSource">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=AMMHINPRDDB3;Initial Catalog=NAC_CM</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>c22ad4a6-9bad-45c2-b243-788e37490944</DataSourceID>
+</RptDataSource>

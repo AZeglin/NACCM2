@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SecurityDataSource">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=AMMHINPRDDB3;Initial Catalog=NACSEC</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>83ccbf05-0d2a-4328-8348-4b7349cfb2e7</DataSourceID>
+</RptDataSource>
