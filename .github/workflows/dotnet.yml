@@ -24,21 +24,9 @@ jobs:
 
     - name: Restore NuGet Packages
       run: nuget restore NACCM.sln
-      
-
-      
-    - name: Build and Publish Web App
-      run: msbuild NACCM.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
-
-    - name: Build app for release
-  run: msbuild src\YourProjectFile.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
-
-
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v2
-      with:
-        name: .net-app
-        path: ${{env.DOTNET_ROOT}}/myapp
+            
+    - name: Build App
+      run: msbuild ${{env.GITHUB_WORKSPACE}}\NACCM\NACCM.sln /p:Configuration=Release /p:DeployOnBuild=false -verbosity:diag
 
 
         
