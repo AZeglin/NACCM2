@@ -11,7 +11,7 @@ jobs:
           
     steps:
 
-	- name: Checkout Code    
+	- name: Check out the code    
       	uses: actions/checkout@master
       
     	- name: Add msbuild to PATH
