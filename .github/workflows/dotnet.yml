@@ -1,4 +1,3 @@
-
 name: Build NACCM
 
 on:
@@ -10,31 +9,30 @@ jobs:
     runs-on: windows-latest
           
     steps:
-      	- uses: actions/checkout@v3
+      - uses: actions/checkout@v3
        
-       - uses: microsoft/setup-msbuild@v1
-	with:
-    	  msbuild-architecture: x64
+      - uses: microsoft/setup-msbuild@v1
+        with:
+           msbuild-architecture: x64
        
-        - name: Setup NuGet
- 	uses: NuGet/setup-nuget@v1.0.2
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.2
      
-	- name: Navigate to workspace
- 	run: cd GITHUB_WORKSPACE
+      - name: Navigate to workspace
+        run: cd GITHUB_WORKSPACE
 
-  	- name: Create a build directory
-   	run: mkdir _build
+      - name: Create a build directory
+        run: mkdir _build
 
-    	- name: Restore Packages
-     	run: nuget restore naccm.sln
+      - name: Restore Packages
+        run: nuget restore naccm.sln
             
-    	- name: Build App
-      	run: msbuild NACCM.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
+      - name: Build App
+        run: msbuild NACCM.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
 
-	- name: Upload artifact
-  	uses: actions/upload-artifact@v1.0.0
- 	 with:
-    		name: Build Output
-    		path: "./_build"
-
-        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1.0.0
+        with:
+           name: Build Output
+           path: "./_build"
+   
