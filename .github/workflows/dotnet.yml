@@ -2,7 +2,7 @@
 name: Build NACCM
 
 on:
-  workflow_dispatch 
+  workflow_dispatch: 
  
 jobs:
   build:
@@ -10,16 +10,13 @@ jobs:
     runs-on: windows-2019
           
     steps:
-
-	- name: Check out the code    
-      	uses: actions/checkout@v2 
-      
-    	- name: Add msbuild to PATH
-      	uses: microsoft/setup-msbuild@v1
+      	- uses: actions/checkout@v3
+       
+       - uses: microsoft/setup-msbuild@v1
 	with:
     	  msbuild-architecture: x64
-
-	- name: Setup NuGet
+       
+        - name: Setup NuGet
  	uses: NuGet/setup-nuget@v1.0.2
      
 	- name: Navigate to workspace
