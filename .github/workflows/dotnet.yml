@@ -11,16 +11,33 @@ jobs:
           
     steps:
 
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
+	- name: Checkout Code    
+      	uses: actions/checkout@master
+      
+    	- name: Add msbuild to PATH
+      	uses: microsoft/setup-msbuild@v1
 	with:
     	  msbuild-architecture: x64
-     
-    - name: Checkout Code
-      uses: actions/checkout@master
-            
-    - name: Build App
-      run: msbuild ${{env.GITHUB_WORKSPACE}}\NACCM\NACCM.sln /p:Configuration=Release /p:DeployOnBuild=false -verbosity:diag
 
+	- name: Setup NuGet
+ 	uses: NuGet/setup-nuget@v1.0.2
+     
+	- name: Navigate to workspace
+ 	run: cd GITHUB_WORKSPACE
+
+  	- name: Create a build directory
+   	run: mkdir _build
+
+    	- name: Restore Packages
+     	run: nuget restore naccm.sln
+            
+    	- name: Build App
+      	run: msbuild NACCM.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
+
+	- name: Upload artifact
+  	uses: actions/upload-artifact@v1.0.0
+ 	 with:
+    		name: Build Output
+    		path: "./_build"
 
         
