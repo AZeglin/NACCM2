@@ -22,10 +22,10 @@ jobs:
         run: mkdir _build
 
       - name: Restore Packages
-        run: nuget restore ../NACCM/naccm.sln
+        run: nuget restore ./NACCM2/NACCM/naccm.sln
             
       - name: Build App
-        run: msbuild ../NACCM/NACCM.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
+        run: msbuild ./NACCM2/NACCM/NACCM.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
