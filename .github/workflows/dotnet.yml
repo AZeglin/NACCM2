@@ -14,7 +14,10 @@ jobs:
       - uses: microsoft/setup-msbuild@v1
         with:
            msbuild-architecture: x64
-           
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+      
       - name: Navigate to workspace
         run: cd $GITHUB_WORKSPACE
 
@@ -41,4 +44,4 @@ jobs:
         run: mkdir _codeql-databases
 
       - name: build scan database
-        run:  codeql database create ${{ github.workspace }}\_codeql-databases\NACCMCodeProjectDatabase --db-cluster --threads=2 --language=csharp,javascript --source-root=${{ github.workspace }}\NACCM\naccm.sln
+        run:  github/codeql database create ${{ github.workspace }}\_codeql-databases\NACCMCodeProjectDatabase --db-cluster --threads=2 --language=csharp,javascript --source-root=${{ github.workspace }}\NACCM\naccm.sln
