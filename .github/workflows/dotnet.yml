@@ -24,8 +24,11 @@ jobs:
       - name: Restore Packages
         run: nuget restore ${{ github.workspace }}\NACCM\naccm.sln
 
-      - name: gac dependency
-        run: "%WindowsSDK_ExecutablePath_x64%/gacutil.exe" /i ${{ github.workspace }}\ApplicationStartup\obj\ServiceLogging.dll
+      - name: gac dependency1
+        run: $publish = New-Object System.EnterpriseServices.Internal.Publish
+
+      - name: gac dependency2
+        run: $publish.GacInstall( /i ${{ github.workspace }}\ApplicationStartup\obj\ServiceLogging.dll )
 
       - name: Build App
         run: msbuild ${{ github.workspace }}\NACCM\naccm.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="PRDAPP3WithPRDDB3" /p:PublishUrl="../_build"
