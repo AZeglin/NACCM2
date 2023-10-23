@@ -16,7 +16,7 @@ jobs:
            msbuild-architecture: x64
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        uses: github/codeql-action/init@v2
       
       - name: Navigate to workspace
         run: cd $GITHUB_WORKSPACE
