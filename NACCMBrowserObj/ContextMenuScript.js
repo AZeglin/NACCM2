@@ -91,8 +91,8 @@ function __showContextMenuRightClick( container, menuName, rowIndex, hiddenField
     e = window.event;
      
     var menuOffset = 2;
-	var menuLeft = 0;
-    var menuTop = 0;
+    var menuLeft = "0px";
+    var menuTop = "0px";
     var hiddenField = document.getElementById( hiddenFieldName );
     var menu = document.getElementById( menuName );
 
