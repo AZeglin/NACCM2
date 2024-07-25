@@ -63,7 +63,7 @@ jobs:
 
     # Build
     - name: Build Using DotNet
-      uses: github/NACCM2/.github/workflows/dotnet.yml@main
+      uses: github/NACCM2/.github/actions/buildAction@v1 
       
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
