@@ -1,9 +1,8 @@
 name: Build NACCM
 
 on:
-  workflow_dispatch: 
-  workflow_call:
-  
+  workflow_dispatch:   
+ 
 jobs:
   build:
 
